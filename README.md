@@ -1,31 +1,64 @@
-# MultiMPDTool
+# 🎬 MultiMPDTool
 
-A Textual-based GUI and command-line tool for decrypting MPD streams using `mp4decrypt` and Widevine DRM. Designed for use in Termux on Android.
+A **Textual-based GUI and CLI tool** for downloading and decrypting MPD (DASH) streams using `mp4decrypt` and Widevine DRM.  
+**Optimized for Termux** on Android.
 
-## Features
-- Download and decrypt MPD streams or decrypt local video/audio files.
-- Input MPD URL, License URL, PSSH, keys, headers (JSON), and output name via GUI.
-- Test MPD URL accessibility.
-- Paste URLs from clipboard.
-- Save and load MPD history.
-- Export decrypted files to a ZIP archive.
-- Dark mode toggle (`d` key).
-- Command-line interface for scripting.
+---
 
-## Prerequisites
-- **Termux** installed on an Android device.
-- Widevine CDM files (`device_client_id_blob` and `device_private_key`).
-- `mp4decrypt` binary (installed via `install_mp4decrypt.sh`).
+## ✨ Features
 
-## Installation
+- 🔓 Download & decrypt MPD streams or decrypt **existing video/audio** files.
+- 📝 Input:
+  - MPD URL
+  - License URL
+  - PSSH
+  - Headers (JSON)
+  - Decryption keys
+  - Output file name
+- 📋 Clipboard support (Paste URLs easily).
+- 🔎 Test MPD URL availability.
+- 🕘 Save & load MPD history.
+- 🗂 Export output as ZIP.
+- 🌙 Dark Mode toggle (`d` key).
+- 💻 Command-line interface for automation.
 
+---
+
+## 📦 Prerequisites
+
+- ✅ **Termux** installed on Android.
+- ✅ Widevine CDM files:
+  - `device_client_id_blob`
+  - `device_private_key`
+- ✅ `mp4decrypt` binary (installed via script below).
+- ✅ Python 3.11+ and other dependencies.
+
+---
+
+## 🛠 Installation
+
+```bash
+# Install required packages
 pkg install python git ffmpeg clang cmake make termux-api -y
+
+# Clone the MultiMPDTool repository
 git clone https://github.com/cingxcong/MultiMPDTool-termux.git
-cd MultiMPDTool
+
+# Change directory
+cd MultiMPDTool-termux
+
+# Install Python dependencies
 pip install -r requirements.txt
+
+# Make mp4decrypt installer executable
 chmod +x install_mp4decrypt.sh
+
+# Run the installer for mp4decrypt
 ./install_mp4decrypt.sh
+
+# Create CDM folder and place your CDM files
 mkdir CDM
 cp /path/to/your/cdm/* CDM/
+
+# Run the Textual GUI tool
 python3 gui_multimpdtool.py
-   
