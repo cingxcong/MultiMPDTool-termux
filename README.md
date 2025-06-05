@@ -19,7 +19,13 @@ A Textual-based GUI and command-line tool for decrypting MPD streams using `mp4d
 
 ## Installation
 
-1. **Install Termux dependencies**:
-   ```bash
-   pkg install python git ffmpeg clang cmake make -y
-   pip install -r requirements.txt
+1. ** pkg install python git ffmpeg clang cmake make termux-api -y
+git clone https://github.com/DevLARLEY/MultiMPDTool.git
+cd MultiMPDTool
+pip install -r requirements.txt
+chmod +x install_mp4decrypt.sh
+./install_mp4decrypt.sh
+mkdir CDM
+cp /path/to/your/cdm/* CDM/
+python3 gui_multimpdtool.py
+   
