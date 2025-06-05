@@ -27,9 +27,7 @@ A **Textual-based GUI and CLI tool** for downloading and decrypting MPD (DASH) s
 ## 📦 Prerequisites
 
 - ✅ **Termux** installed on Android.
-- ✅ Widevine CDM files:
-  - `device_client_id_blob`
-  - `device_private_key`
+- ✅ Widevine CDM file in `.wvd` format (containing device credentials).
 - ✅ `mp4decrypt` binary (installed via script below).
 - ✅ Python 3.11+ and other dependencies.
 
@@ -56,9 +54,9 @@ chmod +x install_mp4decrypt.sh
 # Run the installer for mp4decrypt
 ./install_mp4decrypt.sh
 
-# Create CDM folder and place your CDM files
+# Create CDM folder and copy your .wvd file
 mkdir CDM
-cp /path/to/your/cdm/* CDM/
+cp /path/to/your/cdm/*.wvd CDM/
 
 # Run the Textual GUI tool
 python3 gui_multimpdtool.py
