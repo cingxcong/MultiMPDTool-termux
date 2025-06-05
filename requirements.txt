@@ -1,0 +1,9 @@
+textual
+rich
+xmltodict
+yt_dlp
+ffmpeg-python
+google-api-python-client
+pywidevine
+aiohttp
+pyperclip
