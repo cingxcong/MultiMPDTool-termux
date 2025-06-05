@@ -1,0 +1,36 @@
+#title {
+    content-align: center middle;
+    color: cyan;
+    height: 2;
+    padding: 1 0;
+}
+
+Input {
+    background: black;
+    border: round yellow;
+    height: auto;
+    padding: 1;
+}
+
+Button {
+    border: round green;
+    background: darkgreen;
+    color: white;
+    height: auto;
+    padding: 1;
+}
+
+Static#status {
+    height: auto;
+    padding: 1;
+    color: ansi_bright_white;
+    background: $panel;
+    border: tall cyan;
+}
+
+Select {
+    background: black;
+    border: round yellow;
+    height: auto;
+    padding: 1;
+}
